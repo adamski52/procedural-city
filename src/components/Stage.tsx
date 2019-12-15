@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
-import GrassPlot from './items/plots/GrassPlot';
-import BushesShort from './items/doodads/BushesShort';
+import CementPlot from './items/plots/CementPlot';
+import CraneYellowShort from './items/buildings/industrial/CraneYellowShort';
 
 export default class Stage extends React.Component<any, any> {
     private app:PIXI.Application;
@@ -16,13 +16,13 @@ export default class Stage extends React.Component<any, any> {
             resolution: 1
         });
 
-        let grass = new GrassPlot();
+        let grass = new CementPlot();
         grass.x = grass.getWidth() / 2;
         grass.y = grass.getHeight();
 
-        let item = new BushesShort();
+        let item = new CraneYellowShort();
         grass.addItem(item);
-        // item.flip();
+        item.flip();
         grass.setItemSlotPosition(1, 0, 0);
 
         this.app.stage.addChild(grass);
