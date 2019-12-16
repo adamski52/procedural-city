@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
-import CementPlot from './items/plots/CementPlot';
-import Whatever from './items/doodads/Runway';
+import SnowPlot from './items/plots/SnowPlot';
+import Whatever from './items/doodads/WaterTank';
 
 export default class Stage extends React.Component<any, any> {
     private app:PIXI.Application;
@@ -16,7 +16,7 @@ export default class Stage extends React.Component<any, any> {
             resolution: 1
         });
 
-        let grass = new CementPlot();
+        let grass = new SnowPlot();
         grass.x = grass.getWidth() / 2;
         grass.y = grass.getHeight();
 
