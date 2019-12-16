@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
 import CementPlot from './items/plots/CementPlot';
-import Whatever from './items/buildings/office/OfficeGlassThreeStory';
+import Whatever from './items/doodads/Runway';
 
 export default class Stage extends React.Component<any, any> {
     private app:PIXI.Application;
@@ -22,7 +22,7 @@ export default class Stage extends React.Component<any, any> {
 
         let item = new Whatever();
         grass.addItem(item);
-        item.flip();
+        // item.flip();
         grass.setItemSlotPosition(1, 0, 0);
 
         this.app.stage.addChild(grass);
