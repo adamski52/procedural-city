@@ -1,6 +1,5 @@
 module.exports = {
     preset: "ts-jest",
-    // setupFiles: ["jest-canvas-mock"],
     verbose: true,
     testEnvironment: "jsdom",
     testURL: "https://localhost/index.html",

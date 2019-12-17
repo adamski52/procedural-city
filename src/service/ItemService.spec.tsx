@@ -10,6 +10,6 @@ describe("ItemsService", () => {
 
     it("getItemsByMeta should return all items if no meta specified", () => {
         let actual = itemsService.getItemsByMeta([]);
-        expect(actual.length).toEqual(100);
+        expect(actual.length).toEqual(120);
     });
 });
