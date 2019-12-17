@@ -1,5 +1,5 @@
-import BaseItem from "../BaseItem";
-import img from "../../../img/runway.png";
+import BaseItem from "../../BaseItem";
+import img from "../../../../img/runway.png";
 
 export default class Runway extends BaseItem {
     constructor() {

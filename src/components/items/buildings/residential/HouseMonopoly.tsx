@@ -1,7 +1,7 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/house-monopoly.png";
 
-export default class HouseLong extends BaseItem {
+export default class HouseMonopoly extends BaseItem {
     constructor() {
         super({
             width: 69,

@@ -1,7 +1,7 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/blocks.png";
 
-export default class ACUnits extends BaseItem {
+export default class Blocks extends BaseItem {
     constructor() {
         super({
             width: 25,

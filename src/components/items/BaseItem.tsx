@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js";
 import { IItemProps } from "../../interfaces/ItemProps";
+import { IItemMeta } from "../../interfaces/ItemMeta";
 
 export default abstract class Item extends PIXI.Container {
     private image:PIXI.Texture;
@@ -8,6 +9,7 @@ export default abstract class Item extends PIXI.Container {
     private spriteHeight:number;
     private xCorrection:number;
     private yCorrection:number;
+    private meta:IItemMeta[];
 
     constructor(props:IItemProps) {
         super();
@@ -17,6 +19,8 @@ export default abstract class Item extends PIXI.Container {
 
         this.xCorrection = props.xCorrection;
         this.yCorrection = props.yCorrection;
+
+        this.meta = props.meta || [];
 
         this.image = PIXI.Texture.from(props.img);
         this.sprite = new PIXI.Sprite(this.image);
@@ -41,5 +45,9 @@ export default abstract class Item extends PIXI.Container {
     public flip() {
         this.scale.x = -1;
         this.xCorrection = -this.xCorrection;
+    }
+
+    public getMeta() {
+        return this.meta;
     }
 }

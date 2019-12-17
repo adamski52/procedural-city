@@ -1,7 +1,7 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/house-fancy-corner.png";
 
-export default class HouseFancyOneStory extends BaseItem {
+export default class HouseFancyCorner extends BaseItem {
     constructor() {
         super({
             width: 103,

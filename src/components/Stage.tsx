@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PIXI from "pixi.js";
 import SnowPlot from './items/plots/SnowPlot';
-import Whatever from './items/doodads/WaterTank';
+import Whatever from './items/buildings/airport/Runway';
 
 export default class Stage extends React.Component<any, any> {
     private app:PIXI.Application;
