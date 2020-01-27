@@ -10,6 +10,10 @@ export default class OfficeGlassMedium extends BaseItem {
             xCorrection: -10,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 4
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE,

@@ -10,6 +10,10 @@ export default class OfficeLongWindowsFourStory extends BaseItem {
             xCorrection: -11,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 4
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE

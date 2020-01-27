@@ -10,6 +10,10 @@ export default class BenchWithBack extends BaseItem {
             xCorrection: 6,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.BENCH,

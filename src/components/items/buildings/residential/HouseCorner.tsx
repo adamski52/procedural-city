@@ -10,6 +10,10 @@ export default class HouseCorner extends BaseItem {
             xCorrection: -7,
             yCorrection: -23,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.HOUSE

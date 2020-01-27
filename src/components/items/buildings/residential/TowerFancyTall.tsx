@@ -10,6 +10,10 @@ export default class TowerFancyTall extends BaseItem {
             xCorrection: 10,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.APARTMENT,

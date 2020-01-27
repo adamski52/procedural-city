@@ -10,6 +10,10 @@ export default class Logs extends BaseItem {
             xCorrection: -1,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.LOGS

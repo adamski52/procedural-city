@@ -10,6 +10,10 @@ export default class OfficeTwoStoryShort extends BaseItem {
             xCorrection: 0,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE

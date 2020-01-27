@@ -10,6 +10,10 @@ export default class RoadNWSESW extends BaseItem {
             xCorrection: 0,
             yCorrection: -8,
             img,
+            isometricSize: {
+                depth: 20,
+                width: 20
+            },
             tags: [
                 TagsEnum.ROAD,
                 TagsEnum.NW,

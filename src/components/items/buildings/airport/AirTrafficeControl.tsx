@@ -10,6 +10,10 @@ export default class AirTrafficControl extends BaseItem {
             xCorrection: 1.5,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.AIRPORT
             ]

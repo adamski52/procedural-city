@@ -9,7 +9,12 @@ export default class Car extends BaseItem {
             height: 36,
             xCorrection: 5,
             yCorrection: -16,
-            img,tags: [
+            img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
+            tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.CAR,
                 TagsEnum.FACING

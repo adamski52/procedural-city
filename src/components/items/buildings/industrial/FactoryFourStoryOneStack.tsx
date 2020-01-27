@@ -10,6 +10,10 @@ export default class FactoryFourStoryOneStack extends BaseItem {
             xCorrection: -7,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 4,
+                width: 6
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.FACTORY

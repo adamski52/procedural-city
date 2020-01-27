@@ -10,6 +10,10 @@ export default class VentPipe extends BaseItem {
             xCorrection: 0,
             yCorrection: -19,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.VENT_PIPE

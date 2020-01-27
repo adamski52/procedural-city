@@ -10,6 +10,10 @@ export default class CraneLarge extends BaseItem {
             xCorrection: 16.5,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.CRANE,

@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
-import { IItemProps } from "../../interfaces/ItemProps";
+import { IItemProps, IIsometricSize } from "../../interfaces/ItemProps";
 import {TagsEnum} from "../../interfaces/TagsEnum";
+import ConstantsService from "../../service/ConstantsService";
 
 export default abstract class Item extends PIXI.Container {
     private image:PIXI.Texture;
@@ -10,6 +11,7 @@ export default abstract class Item extends PIXI.Container {
     private xCorrection:number;
     private yCorrection:number;
     private tags:TagsEnum[];
+    private isometricSize:IIsometricSize;
 
     constructor(props:IItemProps) {
         super();
@@ -22,6 +24,8 @@ export default abstract class Item extends PIXI.Container {
 
         this.tags = props.tags || [];
 
+        this.isometricSize = props.isometricSize;
+
         this.image = PIXI.Texture.from(props.img);
         this.sprite = new PIXI.Sprite(this.image);
         this.sprite.anchor.x = .5;
@@ -32,6 +36,16 @@ export default abstract class Item extends PIXI.Container {
     public setPosition(x:number, y:number) {
         this.x = (this.xCorrection + x);
         this.y = (this.yCorrection - y);
+    }
+
+    public getIsometricDepth() {
+        // return Math.ceil(this.spriteHeight / ConstantsService.ISO_SLOT_SIZE);
+        return this.isometricSize.depth;
+    }
+
+    public getIsometricWidth() {
+        // return Math.ceil(this.spriteWidth / ConstantsService.ISO_SLOT_SIZE);
+        return this.isometricSize.width;
     }
 
     public getWidth() {

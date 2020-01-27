@@ -10,6 +10,10 @@ export default class GarageMedium extends BaseItem {
             xCorrection: 4,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.GARAGE,

@@ -10,6 +10,10 @@ export default class Fountain extends BaseItem {
             xCorrection: 1,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.FOUNTAIN

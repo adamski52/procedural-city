@@ -10,6 +10,10 @@ export default class TowerLargePlain extends BaseItem {
             xCorrection: -1,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.APARTMENT,

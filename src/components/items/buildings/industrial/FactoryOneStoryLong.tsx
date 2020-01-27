@@ -10,6 +10,10 @@ export default class FactoryOneStoryLong extends BaseItem {
             xCorrection: -31,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 5
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.FACTORY

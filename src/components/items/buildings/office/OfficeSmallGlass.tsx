@@ -10,6 +10,10 @@ export default class OfficeSmallGlass extends BaseItem {
             xCorrection: 7,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 2
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.TOWER

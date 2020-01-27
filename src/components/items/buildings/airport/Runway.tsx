@@ -10,6 +10,10 @@ export default class Runway extends BaseItem {
             xCorrection: 147,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 20,
+                width: 2
+            },
             tags: [
                 TagsEnum.AIRPORT,
                 TagsEnum.RUNWAY

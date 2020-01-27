@@ -10,6 +10,10 @@ export default class PlaneSmallAway extends BaseItem {
             xCorrection: -9,
             yCorrection: -30,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.AIRPORT,

@@ -10,6 +10,10 @@ export default class TowerLarge extends BaseItem {
             xCorrection: 14,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 4,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.APARTMENT,

@@ -10,6 +10,10 @@ export default class ACUnits extends BaseItem {
             xCorrection: -24,
             yCorrection: -13,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 6
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.AC_UNITS

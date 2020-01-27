@@ -10,6 +10,10 @@ export default class TreeOneBranch extends BaseItem {
             xCorrection: -4,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.TREE,

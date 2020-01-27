@@ -10,6 +10,10 @@ export default class TrafficLightsTRBL extends BaseItem {
             xCorrection: 25,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.TRAFFIC_LIGHT,

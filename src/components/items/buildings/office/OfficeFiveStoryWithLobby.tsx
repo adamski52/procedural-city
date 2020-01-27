@@ -10,6 +10,10 @@ export default class OfficeFiveStoryWithLobby extends BaseItem {
             xCorrection: 2,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE,

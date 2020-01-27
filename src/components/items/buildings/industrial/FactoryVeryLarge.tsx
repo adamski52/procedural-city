@@ -10,6 +10,10 @@ export default class FactoryVeryLarge extends BaseItem {
             xCorrection: 8,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 5,
+                width: 5
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.FACTORY,

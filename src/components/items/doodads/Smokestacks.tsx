@@ -10,6 +10,10 @@ export default class Smokestacks extends BaseItem {
             xCorrection: -32,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 6
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.SMOKESTACK

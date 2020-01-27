@@ -10,6 +10,10 @@ export default class HouseMonopoly extends BaseItem {
             xCorrection: 0,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.HOUSE

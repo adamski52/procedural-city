@@ -10,6 +10,10 @@ export default class OfficeThreeStory extends BaseItem {
             xCorrection: 5,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE

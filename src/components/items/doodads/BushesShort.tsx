@@ -10,6 +10,10 @@ export default class BushesShort extends BaseItem {
             xCorrection: -5,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.BUSH

@@ -10,6 +10,10 @@ export default class BusAway extends BaseItem {
             xCorrection: -6,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.BUS,

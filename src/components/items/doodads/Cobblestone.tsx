@@ -10,6 +10,10 @@ export default class Cobblestone extends BaseItem {
             xCorrection: -1,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.COBBLESTONE

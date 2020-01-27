@@ -10,6 +10,10 @@ export default class WaterTank extends BaseItem {
             xCorrection: 0,
             yCorrection: -20,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.WATER_TANK

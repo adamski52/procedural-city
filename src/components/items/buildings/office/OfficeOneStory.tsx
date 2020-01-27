@@ -10,6 +10,10 @@ export default class OfficeOneStory extends BaseItem {
             xCorrection: 8,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 4,
+                width: 4
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE

@@ -10,6 +10,10 @@ export default class TowerSevenStory extends BaseItem {
             xCorrection: -12,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 3
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.APARTMENT

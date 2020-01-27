@@ -9,6 +9,10 @@ export default class RoadFullIntersection extends BaseItem {
             height: 249,
             xCorrection: 0,
             yCorrection: -8,
+            isometricSize: {
+                depth: 20,
+                width: 20
+            },
             img,
             tags: [
                 TagsEnum.ROAD,

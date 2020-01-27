@@ -10,6 +10,10 @@ export default class ConstructionTowerMedium extends BaseItem {
             xCorrection: -11,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 4,
+                width: 4
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.TOWER,

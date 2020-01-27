@@ -9,6 +9,10 @@ export default class RoadNESE extends BaseItem {
             height: 248,
             xCorrection: 82,
             yCorrection: -8,
+            isometricSize: {
+                depth: 20,
+                width: 20
+            },
             img,
             tags: [
                 TagsEnum.ROAD,

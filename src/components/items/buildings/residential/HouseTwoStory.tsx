@@ -10,6 +10,10 @@ export default class HouseTwoStory extends BaseItem {
             xCorrection: 9,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.HOUSE

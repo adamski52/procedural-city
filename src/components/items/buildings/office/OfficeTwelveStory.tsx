@@ -10,6 +10,10 @@ export default class OfficeTwelveStory extends BaseItem {
             xCorrection: -4,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.TOWER

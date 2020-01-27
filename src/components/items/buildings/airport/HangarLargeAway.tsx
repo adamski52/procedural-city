@@ -10,6 +10,10 @@ export default class HangarLargeAway extends BaseItem {
             xCorrection: -1,
             yCorrection: -17,
             img,
+            isometricSize: {
+                depth: 5,
+                width: 4
+            },
             tags: [
                 TagsEnum.AIRPORT,
                 TagsEnum.HANGAR,

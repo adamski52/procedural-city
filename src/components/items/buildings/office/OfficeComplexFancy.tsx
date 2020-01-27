@@ -10,6 +10,10 @@ export default class OfficeComplexFancy extends BaseItem {
             xCorrection: -9,
             yCorrection: -90,
             img,
+            isometricSize: {
+                depth: 6,
+                width: 6
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE,

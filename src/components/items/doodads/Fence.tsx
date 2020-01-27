@@ -10,6 +10,10 @@ export default class Fence extends BaseItem {
             xCorrection: -73,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 9
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.FENCE

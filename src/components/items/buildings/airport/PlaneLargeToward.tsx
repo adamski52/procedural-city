@@ -10,6 +10,10 @@ export default class PlaneLargeToward extends BaseItem {
             xCorrection: -12,
             yCorrection: -50,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.AIRPORT,

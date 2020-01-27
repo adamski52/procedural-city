@@ -10,6 +10,10 @@ export default class FactoryWithGarages extends BaseItem {
             xCorrection: -24,
             yCorrection: -15,
             img,
+            isometricSize: {
+                depth: 4,
+                width: 6
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.FACTORY,

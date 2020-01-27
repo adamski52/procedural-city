@@ -10,6 +10,10 @@ export default class HouseFancyOneStory extends BaseItem {
             xCorrection: -13,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.RESIDENTIAL,
                 TagsEnum.HOUSE

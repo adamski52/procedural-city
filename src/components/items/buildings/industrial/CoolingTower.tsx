@@ -10,6 +10,10 @@ export default class CoolingTower extends BaseItem {
             xCorrection: 0,
             yCorrection: -26,
             img,
+            isometricSize: {
+                depth: 2,
+                width: 2
+            },
             tags: [
                 TagsEnum.INDUSTRIAL,
                 TagsEnum.TOWER

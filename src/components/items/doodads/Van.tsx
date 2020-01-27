@@ -10,6 +10,10 @@ export default class Van extends BaseItem {
             xCorrection: 8,
             yCorrection: -17,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.VAN

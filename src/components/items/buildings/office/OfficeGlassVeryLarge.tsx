@@ -10,6 +10,10 @@ export default class OfficeGlassVeryLarge extends BaseItem {
             xCorrection: -4,
             yCorrection: -18,
             img,
+            isometricSize: {
+                depth: 3,
+                width: 3
+            },
             tags: [
                 TagsEnum.COMMERCIAL,
                 TagsEnum.OFFICE,

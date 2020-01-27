@@ -10,6 +10,10 @@ export default class WatchTower extends BaseItem {
             xCorrection: 0,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.JUNK,
                 TagsEnum.WATCHTOWER

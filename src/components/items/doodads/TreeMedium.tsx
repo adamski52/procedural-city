@@ -10,6 +10,10 @@ export default class TreeMedium extends BaseItem {
             xCorrection: 0,
             yCorrection: -14,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.DECORATION,
                 TagsEnum.TREE,

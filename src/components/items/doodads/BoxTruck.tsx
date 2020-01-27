@@ -10,6 +10,10 @@ export default class BoxTruck extends BaseItem {
             xCorrection: 9,
             yCorrection: -16,
             img,
+            isometricSize: {
+                depth: 1,
+                width: 1
+            },
             tags: [
                 TagsEnum.VEHICLE,
                 TagsEnum.TRUCK,
