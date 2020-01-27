@@ -12,6 +12,8 @@ export default abstract class Item extends PIXI.Container {
     private yCorrection:number;
     private tags:TagsEnum[];
     private isometricSize:IIsometricSize;
+    private isometricX:number = 0;
+    private isometricY:number = 0;
 
     constructor(props:IItemProps) {
         super();
@@ -33,7 +35,26 @@ export default abstract class Item extends PIXI.Container {
         this.addChild(this.sprite);
     }
 
-    public setPosition(x:number, y:number) {
+    public setIsometricPosition(xSlot:number, ySlot:number) {
+        this.isometricX = xSlot;
+        this.isometricY = ySlot;
+
+        let scaledX = this.isometricX * ConstantsService.ISO_SLOT_SIZE,
+            scaledY = this.isometricY * ConstantsService.ISO_SLOT_SIZE,
+            isoX = scaledX - scaledY,
+            isoY = (scaledX + scaledY) / ConstantsService.ISO_RATIO;
+
+        this.setPosition(isoX, isoY);
+    }
+
+    public getIsometricPosition() {
+        return {
+            x: this.isometricX,
+            y: this.isometricY
+        };
+    }
+
+    private setPosition(x:number, y:number) {
         this.x = (this.xCorrection + x);
         this.y = (this.yCorrection - y);
     }
