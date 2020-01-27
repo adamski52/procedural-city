@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/NE-SE-SW.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class RoadNESESW extends BaseItem {
     constructor() {
@@ -8,7 +9,13 @@ export default class RoadNESESW extends BaseItem {
             height: 248,
             xCorrection: 0,
             yCorrection: -8,
-            img
+            img,
+            tags: [
+                TagsEnum.ROAD,
+                TagsEnum.NE,
+                TagsEnum.SE,
+                TagsEnum.SW
+            ]
         });
     }
 }

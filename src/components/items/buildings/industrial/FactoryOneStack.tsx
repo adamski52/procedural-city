@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/factory-1-stack.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class FactoryOneStack extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class FactoryOneStack extends BaseItem {
             height: 156,
             xCorrection: 0.5,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.INDUSTRIAL,
+                TagsEnum.FACTORY
+            ]
         });
     }
 }

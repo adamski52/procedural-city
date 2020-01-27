@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-2-story.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeTwoStory extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class OfficeTwoStory extends BaseItem {
             height: 104,
             xCorrection: -5,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.OFFICE
+            ]
         });
     }
 }

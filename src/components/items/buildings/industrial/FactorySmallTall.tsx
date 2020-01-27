@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/factory-small-tall.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class FactorySmallTall extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class FactorySmallTall extends BaseItem {
             height: 226,
             xCorrection: 2,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.INDUSTRIAL,
+                TagsEnum.FACTORY
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/runway.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class Runway extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class Runway extends BaseItem {
             height: 265,
             xCorrection: 147,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.AIRPORT,
+                TagsEnum.RUNWAY
+            ]
         });
     }
 }

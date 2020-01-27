@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/crane-yellow-small.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class CraneYellowShort extends BaseItem {
     constructor() {
@@ -8,7 +9,13 @@ export default class CraneYellowShort extends BaseItem {
             height: 220,
             xCorrection: -15.5,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.INDUSTRIAL,
+                TagsEnum.CRANE,
+                TagsEnum.SMALL,
+                TagsEnum.ALTERNATE
+            ]
         });
     }
 }

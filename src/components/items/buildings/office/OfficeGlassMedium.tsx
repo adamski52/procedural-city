@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-glass-medium.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeGlassMedium extends BaseItem {
     constructor() {
@@ -8,7 +9,13 @@ export default class OfficeGlassMedium extends BaseItem {
             height: 252,
             xCorrection: -10,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.OFFICE,
+                TagsEnum.TOWER,
+                TagsEnum.MEDIUM
+            ]
         });
     }
 }

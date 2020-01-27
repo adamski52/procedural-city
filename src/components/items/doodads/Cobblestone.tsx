@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/cobblestone.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class Cobblestone extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class Cobblestone extends BaseItem {
             height: 41,
             xCorrection: -1,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.COBBLESTONE
+            ]
         });
     }
 }

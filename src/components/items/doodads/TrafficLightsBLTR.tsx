@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/traffic-lights-BL-TR.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class TrafficLightsBLTR extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class TrafficLightsBLTR extends BaseItem {
             height: 88,
             xCorrection: -21,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.TRAFFIC_LIGHT,
+                TagsEnum.SW
+            ]
         });
     }
 }

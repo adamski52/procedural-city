@@ -14,7 +14,8 @@ export default abstract class Plot extends Item {
             height: 449,
             xCorrection: 0,
             yCorrection: 0,
-            img: props.img
+            img: props.img,
+            tags: props.tags
         });
     }
 

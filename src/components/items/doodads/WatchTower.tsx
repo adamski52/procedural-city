@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/watch-tower.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class WatchTower extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class WatchTower extends BaseItem {
             height: 70,
             xCorrection: 0,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.JUNK,
+                TagsEnum.WATCHTOWER
+            ]
         });
     }
 }

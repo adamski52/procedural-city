@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/house-fancy-1-story.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class HouseFancyOneStory extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class HouseFancyOneStory extends BaseItem {
             height: 96,
             xCorrection: -13,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.RESIDENTIAL,
+                TagsEnum.HOUSE
+            ]
         });
     }
 }

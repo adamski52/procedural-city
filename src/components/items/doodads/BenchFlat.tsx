@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/bench-flat.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class BenchFlat extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class BenchFlat extends BaseItem {
             height: 18,
             xCorrection: -3,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.BENCH
+            ]
         });
     }
 }

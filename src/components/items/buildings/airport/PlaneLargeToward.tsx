@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/plane-large-toward.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class PlaneLargeToward extends BaseItem {
     constructor() {
@@ -8,7 +9,14 @@ export default class PlaneLargeToward extends BaseItem {
             height: 83,
             xCorrection: -12,
             yCorrection: -50,
-            img
+            img,
+            tags: [
+                TagsEnum.VEHICLE,
+                TagsEnum.AIRPORT,
+                TagsEnum.AIRPLANE,
+                TagsEnum.LARGE,
+                TagsEnum.FACING
+            ]
         });
     }
 }

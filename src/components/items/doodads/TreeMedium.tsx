@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/tree-medium.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class TreeMedium extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class TreeMedium extends BaseItem {
             height: 48,
             xCorrection: 0,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.TREE,
+                TagsEnum.MEDIUM
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-glass-3-story.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeGlassThreeStory extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class OfficeGlassThreeStory extends BaseItem {
             height: 135,
             xCorrection: 0,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.OFFICE
+            ]
         });
     }
 }

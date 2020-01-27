@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-complex.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeComplex extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class OfficeComplex extends BaseItem {
             height: 170,
             xCorrection: 30,
             yCorrection: -24,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.OFFICE,
+                TagsEnum.LARGE
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/blocks.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class Blocks extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class Blocks extends BaseItem {
             height: 22,
             xCorrection: -1,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.JUNK,
+                TagsEnum.BLOCKS
+            ]
         });
     }
 }

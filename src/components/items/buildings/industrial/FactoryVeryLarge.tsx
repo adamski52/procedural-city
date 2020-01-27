@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/factory-very-large.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class FactoryVeryLarge extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class FactoryVeryLarge extends BaseItem {
             height: 257,
             xCorrection: 8,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.INDUSTRIAL,
+                TagsEnum.FACTORY,
+                TagsEnum.XLARGE
+            ]
         });
     }
 }

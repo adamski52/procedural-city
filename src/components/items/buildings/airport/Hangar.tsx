@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/hangar.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class Hangar extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class Hangar extends BaseItem {
             height: 136,
             xCorrection: -14,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.AIRPORT,
+                TagsEnum.HANGAR,
+                TagsEnum.FACING
+            ]
         });
     }
 }

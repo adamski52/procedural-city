@@ -1,4 +1,4 @@
-import { IItemMeta } from "./ItemMeta";
+import { TagsEnum } from "../interfaces/TagsEnum";
 
 export interface IItemProps {
     width: number;
@@ -6,5 +6,5 @@ export interface IItemProps {
     xCorrection: number;
     yCorrection: number;
     img: string;
-    meta?: IItemMeta[];
+    tags?: TagsEnum[];
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/bushes-short.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class BushesShort extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class BushesShort extends BaseItem {
             height: 21,
             xCorrection: -5,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.BUSH
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/fountain.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class Fountain extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class Fountain extends BaseItem {
             height: 38,
             xCorrection: 1,
             yCorrection: -18,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.FOUNTAIN
+            ]
         });
     }
 }

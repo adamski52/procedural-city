@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/tree-2-branch.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class TreeTwoBranch extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class TreeTwoBranch extends BaseItem {
             height: 44,
             xCorrection: 0,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.TREE,
+                TagsEnum.LARGE
+            ]
         });
     }
 }

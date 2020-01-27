@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/house-long.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class HouseLong extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class HouseLong extends BaseItem {
             height: 75,
             xCorrection: 10,
             yCorrection: -16,
-            img
+            img,
+            tags: [
+                TagsEnum.RESIDENTIAL,
+                TagsEnum.HOUSE
+            ]
         });
     }
 }

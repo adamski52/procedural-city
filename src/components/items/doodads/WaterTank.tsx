@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/water-tank.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class WaterTank extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class WaterTank extends BaseItem {
             height: 81,
             xCorrection: 0,
             yCorrection: -20,
-            img
+            img,
+            tags: [
+                TagsEnum.JUNK,
+                TagsEnum.WATER_TANK
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-6-story-skinny.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeSixStorySkinny extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class OfficeSixStorySkinny extends BaseItem {
             height: 225,
             xCorrection: 0,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.TOWER
+            ]
         });
     }
 }

@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/smoke-stacks.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class Smokestacks extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class Smokestacks extends BaseItem {
             height: 108,
             xCorrection: -32,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.JUNK,
+                TagsEnum.SMOKESTACK
+            ]
         });
     }
 }

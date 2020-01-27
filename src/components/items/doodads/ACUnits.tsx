@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/AC-units.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class ACUnits extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class ACUnits extends BaseItem {
             height: 78,
             xCorrection: -24,
             yCorrection: -13,
-            img
+            img,
+            tags: [
+                TagsEnum.JUNK,
+                TagsEnum.AC_UNITS
+            ]
         });
     }
 }

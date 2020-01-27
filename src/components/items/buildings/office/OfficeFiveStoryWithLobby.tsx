@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/office-5-story-with-lobby.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class OfficeFiveStoryWithLobby extends BaseItem {
     constructor() {
@@ -8,7 +9,12 @@ export default class OfficeFiveStoryWithLobby extends BaseItem {
             height: 176,
             xCorrection: 2,
             yCorrection: -15,
-            img
+            img,
+            tags: [
+                TagsEnum.COMMERCIAL,
+                TagsEnum.OFFICE,
+                TagsEnum.TOWER
+            ]
         });
     }
 }

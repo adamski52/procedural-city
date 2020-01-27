@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/rose-bush.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class RoseBush extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class RoseBush extends BaseItem {
             height: 18,
             xCorrection: 0,
             yCorrection: -18,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.BUSH
+            ]
         });
     }
 }

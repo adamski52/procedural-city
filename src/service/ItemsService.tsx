@@ -113,64 +113,52 @@ import Smokestacks from "../components/items/doodads/Smokestacks";
 import VentPipe from "../components/items/doodads/VentPipe";
 import WatchTower from "../components/items/doodads/WatchTower";
 import WaterTank from "../components/items/doodads/WaterTank";
-import { IItemMeta } from "../interfaces/ItemMeta";
-
+import {TagsEnum} from "../interfaces/TagsEnum";
 
 export default class ItemsService {
-    private plots = [
-        new CementPlot(), new GrassPlot(), new SnowPlot()
+    private items = [
+        // plots
+        new CementPlot(), new GrassPlot(), new SnowPlot(),
+
+        // residential
+        new HouseCorner(), new HouseFancyCorner(), new HouseFancyOneStory(), new HouseFancyOneStory(), new HouseLong(), new HouseMonopoly(), new HouseTwoStory(), new HouseTwoStoryFancy(), new HouseTwoStoryFancyAlt(), new TowerFancyShort(), new TowerFancyTall(), new TowerLarge(), new TowerLargePlain(), new TowerPlainFiveStory(), new TowerSevenStory(), new TowerSmallPlain(),
+
+        // airport
+        new AirTrafficControl(), new Hangar(), new HangarAway(), new HangarLarge(), new HangarLargeAway(), new HangarVerySmall(),
+        
+        // airport vehicles
+        new PlaneLargeAway(), new PlaneLargeToward(), new PlaneSmallAway(), new PlaneSmallToward(),
+
+        // industrial
+        new CoolingTower(), new CraneLarge(), new CraneShort(), new CraneYellowLarge(), new CraneYellowShort(), new FactoryFourStoryOneStack(), new FactoryFourStoryTwoStack(), new FactoryOneStack(), new FactoryOneStoryLong(), new FactoryOneStoryThreeStack(), new FactorySmall(), new FactorySmallTall(), new FactoryTwoStoryTwoStack(), new FactoryVeryLarge(), new FactoryWithGarages(), new GarageLarge(), new GarageMedium(), new GarageSmall(),
+
+        // commercial
+        new ConstructionTowerLarge(), new ConstructionTowerMedium(), new ConstructionTowerVeryLarge(), new OfficeComplex(), new OfficeComplexFancy(), new OfficeEightStory(), new OfficeFiveStoryWithLobby(), new OfficeFourStory(), new OfficeGlassFourStory(), new OfficeGlassLarge(), new OfficeGlassMedium(), new OfficeGlassShort(), new OfficeGlassSixStory(), new OfficeGlassThreeStory(), new OfficeGlassVeryLarge(), new OfficeLongWindowsFourStory(), new OfficeOneStory(), new OfficeSixStorySkinny(), new OfficeSmallGlass(), new OfficeThreeStory(), new OfficeTwelveStory(), new OfficeTwoStory(), new OfficeTwoStoryCorner(), new OfficeTwoStoryShort(),
+
+        // roads
+        new RoadFullIntersection(), new RoadNESE(), new RoadNESESW(), new RoadNESW(), new RoadNWNE(), new RoadNWNESW(), new RoadNWSE(), new RoadNWSESW(), new RoadNWSW(), new RoadSESW(), new TrafficLightsBLTR(), new TrafficLightsBRTL(), new TrafficLightsTLBR(), new TrafficLightsTRBL(), new TrafficTree(),
+
+        // road vehicles
+        new BoxTruck(), new BusAway(), new Car(), new PickupEmpty(), new PickupFull(), new Van(),
+
+        // decorations
+        new BenchFlat(), new BenchWithBack(), new Bushes(), new BushesShort(), new BushesTall(), new Cobblestone(), new Fence(), new Fountain(), new LightPost(), new RoseBush(), new Sidewalk(), new Topiary(), new TreeMedium(), new TreeOneBranch(), new TreeShort(), new TreeTwoBranch(),
+        
+        // junk
+        new Blocks(), new Boxes(), new Logs(), new ACUnits(), new VentPipe(), new Smokestacks(), new WatchTower(), new WaterTank()
     ];
 
-    private residential = [
-        new HouseCorner(), new HouseFancyCorner(), new HouseFancyOneStory(), new HouseFancyOneStory(), new HouseLong(), new HouseMonopoly(), new HouseTwoStory(), new HouseTwoStoryFancy(), new HouseTwoStoryFancyAlt(), new TowerFancyShort(), new TowerFancyTall(), new TowerLarge(), new TowerLargePlain(), new TowerPlainFiveStory(), new TowerSevenStory(), new TowerSmallPlain()
-    ];
+    public getItemsByTags(tags:TagsEnum[]) {
+        if(tags.length <= 0) {
+            return this.items;
+        }
 
-    private airport = [
-        new ACUnits(), new AirTrafficControl(), new Hangar(), new HangarAway(), new HangarLarge(), new HangarLargeAway(), new HangarVerySmall(), new VentPipe(), new WatchTower(), new WaterTank()
-    ];
-
-    private airportVehicles = [
-        new PlaneLargeAway(), new PlaneLargeToward(), new PlaneSmallAway(), new PlaneSmallToward()
-    ];
-
-    private industrials = [
-        new ACUnits(), new CoolingTower(), new CraneLarge(), new CraneShort(), new CraneYellowLarge(), new CraneYellowShort(), new FactoryFourStoryOneStack(), new FactoryFourStoryTwoStack(), new FactoryOneStack(), new FactoryOneStoryLong(), new FactoryOneStoryThreeStack(), new FactorySmall(), new FactorySmallTall(), new FactoryTwoStoryTwoStack(), new FactoryVeryLarge(), new FactoryWithGarages(), new GarageLarge(), new GarageMedium(), new GarageSmall(), new Smokestacks(), new VentPipe(), new WatchTower(), new WaterTank()
-    ];
-
-    private offices = [
-        new ACUnits(), new ConstructionTowerLarge(), new ConstructionTowerMedium(), new ConstructionTowerVeryLarge(), new OfficeComplex(), new OfficeComplexFancy(), new OfficeEightStory(), new OfficeFiveStoryWithLobby(), new OfficeFourStory(), new OfficeGlassFourStory(), new OfficeGlassLarge(), new OfficeGlassMedium(), new OfficeGlassShort(), new OfficeGlassSixStory(), new OfficeGlassThreeStory(), new OfficeGlassVeryLarge(), new OfficeLongWindowsFourStory(), new OfficeOneStory(), new OfficeSixStorySkinny(), new OfficeSmallGlass(), new OfficeThreeStory(), new OfficeTwelveStory(), new OfficeTwoStory(), new OfficeTwoStoryCorner(), new OfficeTwoStoryShort(), new VentPipe(), new WaterTank()
-    ];
-
-    private roads = [
-        new RoadFullIntersection(), new RoadNESE(), new RoadNESESW(), new RoadNESW(), new RoadNWNE(), new RoadNWNESW(), new RoadNWSE(), new RoadNWSESW(), new RoadNWSW(), new RoadSESW(), new TrafficLightsBLTR(), new TrafficLightsBRTL(), new TrafficLightsTLBR(), new TrafficLightsTRBL(), new TrafficTree()
-    ];
-
-    private vehicles = [
-        new BoxTruck(), new BusAway(), new Car(), new PickupEmpty(), new PickupFull(), new Van()
-    ];
-
-    private decorations = [
-        new BenchFlat(), new BenchWithBack(), new Bushes(), new BushesShort(), new BushesTall(), new Cobblestone(), new Fence(), new Fountain(), new LightPost(), new RoseBush(), new Sidewalk(), new Topiary(), new TreeMedium(), new TreeOneBranch(), new TreeShort(), new TreeTwoBranch()
-    ];
-
-    private junks = [
-        new Blocks(), new Boxes(), new Logs()
-    ];
-
-    private all = [
-        ...this.residential, ...this.airport, ...this.airportVehicles, ...this.industrials, ...this.offices, ...this.roads, ...this.vehicles, ...this.decorations, ...this.junks
-    ];
-
-    public getItemsByMeta(meta:IItemMeta[]) {
-        return this.all.filter((item) => {
-            let matchingMetas = item.getMeta().filter((m) => {
-                return !!meta.filter((m2) => {
-                    return m2.key === m.key && m2.value === m.value;
-                });
-            });
-
-            if(matchingMetas.length < meta.length) {
-                return false;
+        return this.items.filter((item) => {
+            let itemTags = item.getTags();
+            for(let i = 0; i < tags.length; i++) {
+                if(itemTags.indexOf(tags[i]) < 0) {
+                    return false;
+                }
             }
 
             return true;

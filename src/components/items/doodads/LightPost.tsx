@@ -1,5 +1,6 @@
 import BaseItem from "../BaseItem";
 import img from "../../../img/light-post.png";
+import { TagsEnum } from "../../../interfaces/TagsEnum";
 
 export default class LightPost extends BaseItem {
     constructor() {
@@ -8,7 +9,11 @@ export default class LightPost extends BaseItem {
             height: 29,
             xCorrection: 0,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.DECORATION,
+                TagsEnum.LIGHT
+            ]
         });
     }
 }

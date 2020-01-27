@@ -1,5 +1,6 @@
 import BaseItem from "../../BaseItem";
 import img from "../../../../img/atc.png";
+import { TagsEnum } from "../../../../interfaces/TagsEnum";
 
 export default class AirTrafficControl extends BaseItem {
     constructor() {
@@ -8,7 +9,10 @@ export default class AirTrafficControl extends BaseItem {
             height: 192,
             xCorrection: 1.5,
             yCorrection: -14,
-            img
+            img,
+            tags: [
+                TagsEnum.AIRPORT
+            ]
         });
     }
 }
