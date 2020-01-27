@@ -11,7 +11,9 @@ module.exports = {
         "<rootDir>/(src|test)/**/*.spec.ts?(x)"
     ],
     moduleNameMapper: {
-        "\\.(css|less)$": "identity-obj-proxy"
+        "\\.(css|less)$": "identity-obj-proxy",
+        // "\\.(png)$": "<rootDir>/src/imageTransformer.js"
     },
     moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+    // setupFiles: ['<rootDir>/src/setupTests.ts', 'jest-canvas-mock']
 };
