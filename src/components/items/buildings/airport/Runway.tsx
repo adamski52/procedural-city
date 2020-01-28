@@ -12,7 +12,7 @@ export default class Runway extends BaseItem {
             img,
             isometricSize: {
                 depth: 20,
-                width: 2
+                width: 3
             },
             tags: [
                 TagsEnum.AIRPORT,

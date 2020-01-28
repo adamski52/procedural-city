@@ -21,10 +21,7 @@ export default class Stage extends React.Component<any, any> {
         grass.y = grass.getHeight();
 
         let item = new Whatever();
-        item.setIsometricPosition(0, 0);
-        grass.addItem(item);
-        // item.flip();
-        // grass.setItemSlotPosition(1, 0, 0);
+        grass.addItem(item, 0, 0);
 
         this.app.stage.addChild(grass);
     }

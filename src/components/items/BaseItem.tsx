@@ -4,16 +4,16 @@ import {TagsEnum} from "../../interfaces/TagsEnum";
 import ConstantsService from "../../service/ConstantsService";
 
 export default abstract class Item extends PIXI.Container {
-    private image:PIXI.Texture;
-    private sprite:PIXI.Sprite;
-    private spriteWidth:number;
-    private spriteHeight:number;
-    private xCorrection:number;
-    private yCorrection:number;
-    private tags:TagsEnum[];
-    private isometricSize:IIsometricSize;
-    private isometricX:number = 0;
-    private isometricY:number = 0;
+    protected image:PIXI.Texture;
+    protected sprite:PIXI.Sprite;
+    protected spriteWidth:number;
+    protected spriteHeight:number;
+    protected xCorrection:number;
+    protected yCorrection:number;
+    protected tags:TagsEnum[];
+    protected isometricSize:IIsometricSize;
+    protected isometricX:number = 0;
+    protected isometricY:number = 0;
 
     constructor(props:IItemProps) {
         super();
@@ -60,12 +60,10 @@ export default abstract class Item extends PIXI.Container {
     }
 
     public getIsometricDepth() {
-        // return Math.ceil(this.spriteHeight / ConstantsService.ISO_SLOT_SIZE);
         return this.isometricSize.depth;
     }
 
     public getIsometricWidth() {
-        // return Math.ceil(this.spriteWidth / ConstantsService.ISO_SLOT_SIZE);
         return this.isometricSize.width;
     }
 
@@ -78,6 +76,11 @@ export default abstract class Item extends PIXI.Container {
     }
 
     public flip() {
+        this.isometricSize = {
+            width: this.isometricSize.depth,
+            depth: this.isometricSize.width
+        };
+        
         this.scale.x = -1;
         this.xCorrection = -this.xCorrection;
     }
